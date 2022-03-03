@@ -1,0 +1,38 @@
+/********  Dynamic Property adn selector name *********/
+//******** #{$variable} *********
+
+$size: 20px;
+.test1 {
+  padding: $size;
+}
+
+// $property: padding;
+// $property: padding-top;
+// $property: margin-top;
+$property: width;
+.test2 {
+  #{$property}: $size;
+}
+
+// $selector: '.my-class2';
+// $selector: header;
+$selector: '#footer';
+
+#{$selector}{
+  #{$property}: $size;
+}
+
+@mixin alert($name, $color){
+  .alert-#{$name}{
+    background-color: lighten($color: $color, $amount: 20%);
+    color: $color;
+    border: 1px solid $color;
+    padding: 1em;
+  }
+}
+
+
+@include alert(primary, $primary);
+@include alert(secondary, $dark);
+@include alert(custom, #40d440 )
+

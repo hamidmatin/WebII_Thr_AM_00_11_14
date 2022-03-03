@@ -1,0 +1,32 @@
+/********** @content **********/
+@mixin my-mixin-2($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+  @content;
+}
+.my-class-1{
+  @include my-mixin-2(blue, yellow)
+}
+.my-class-2{
+  @include my-mixin-2($color: red, $bg-color: green){
+    padding: 20px;
+  }
+}
+
+.my-class-3 {
+  @include my-mixin-2($color: red, $bg-color: green);
+  padding: 20px;
+}
+
+@mixin my-mixin-3($name, $color) {
+  .border-#{$name}{
+    border-color: $color;
+    @content;
+  }
+}
+
+@include my-mixin-3('primary', $primary);
+@include my-mixin-3('secondary', $secondary) {
+  border-radius: 6px;
+  padding: 10px;
+}
