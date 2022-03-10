@@ -2,14 +2,13 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won't be available)
-@import "my-variables";
+@import "my-variables-1";
 
-@import "../../lib/bootstrap/scss/bootstrap.scss";
+// @import "../../lib/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
 
 .my-class{
   background-color: aqua;
 }
-
 
