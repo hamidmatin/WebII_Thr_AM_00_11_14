@@ -909,4 +909,12 @@ sup {
   border-radius: 6px;
   padding: 10px;
 }
+
+.bgi-1 {
+  background-image: url("/images/pic1.png");
+}
+
+.bgi-2 {
+  background-image: url("/new-images/pic2.png");
+}
 /*# sourceMappingURL=style.css.map */

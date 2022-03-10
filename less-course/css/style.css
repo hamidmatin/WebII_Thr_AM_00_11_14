@@ -1,0 +1,206 @@
+/***** Variables *****/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #353535;
+  background-color: #f1f1f1;
+  margin: 0;
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 56px;
+}
+h3 {
+  font-size: 48px;
+}
+h4 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 32px / 2;
+}
+.test-blue {
+  color: #45a4f3;
+}
+.test-primary {
+  color: #45a4f3;
+}
+/************ Nesting ***********/
+/*
+  decendant selector
+  selector1{
+    selector2{
+                        
+    }
+  }
+  
+  child selector
+  selector1{
+    > selector2{
+                        
+    }
+  }
+
+  sibling selector
+  selector1{
+    + selector2{
+                        
+    }
+  }
+  sibling selector
+  selector1{
+    ~ selector2{
+                        
+    }
+  }
+
+  parent selector &
+
+  selector1{
+    &:hover{
+    }
+
+    & + &{
+                        
+    }
+  }
+*/
+.nav {
+  height: 50px;
+  background-color: #353535;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav ul a {
+  display: block;
+  text-decoration: none;
+  color: #f1f1f1;
+  background-color: #353535;
+  line-height: 50px;
+  padding: 0 16px;
+  outline: none;
+}
+.nav ul a:hover,
+.nav ul a:focus {
+  background-color: #ca1d1d;
+  color: #f1f1f1;
+}
+.nav > ul > li {
+  float: left;
+}
+h2 + p {
+  border-top: 1px solid gray;
+}
+/***** Not Supported *******/
+.card-link {
+  background-color: #fff;
+}
+.card-link + .card-link {
+  margin-left: 10px;
+}
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+/******** dynamic_name ******/
+.btn-primary {
+  color: #45a4f3;
+}
+.alert-primary {
+  background-color: #45a4f3;
+}
+.alert-primary::after {
+  content: url('/new-images/icon.png');
+}
+.icon {
+  background-image: url("/pics/bgdesert.jpg");
+}
+.icon2 {
+  background-image: url("/new-images/new-icon.jpg");
+}
+.section {
+  color: #3f3d3d;
+}
+.btn1 {
+  padding: 20px;
+  color: #ff1e87;
+  border: 2px solid #ff1e87;
+  box-shadow: 0 4px 2px #ff1e87;
+}
+.btn2 {
+  padding: 20px;
+  background-color: dodgerblue;
+  border: 2px solid #004384;
+}
+/******* Mixins ***********/
+.a {
+  color: red;
+}
+#my-id {
+  background-color: #ccc;
+}
+.use-mixin {
+  font-size: 18px;
+  color: red;
+  background-color: #ccc;
+  height: 2em;
+  width: 100px;
+  background-color: #555;
+}
+.use-mixin:hover {
+  background-color: #222222;
+}
+.my-class {
+  padding: 10px;
+  background-color: green;
+}
+.my-class:hover {
+  background-color: #001a00;
+}
+.my-class-2 {
+  margin-top: 20px;
+}
+.btn {
+  padding: 20px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.without-important {
+  color: red;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+.with-imortant {
+  color: red !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+}
+/********** Mixin Overloading ************/
+.my-class-3 {
+  color: red;
+}
+.my-class-4 {
+  background-color: red;
+  font-size: 20px;
+}
+.my-class-5 {
+  background-color: #a5abcf;
+  color: black;
+}
+.my-class-6 {
+  background-color: #750606;
+  color: white;
+}
+/********** Main Style *****/
+/*# sourceMappingURL=style.css.map */

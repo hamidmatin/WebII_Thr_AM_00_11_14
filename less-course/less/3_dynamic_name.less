@@ -1,0 +1,57 @@
+/******** dynamic_name ******/
+@selector: primary;
+@property: color;
+
+@images-folder: '/images';
+
+.btn-@{selector}{
+  @{property}: @primary;
+}
+
+.alert-@{selector}{
+  background-@{property}: @primary;
+  &::after{
+    content: url('@{images-folder}/icon.png');
+  }
+}
+
+
+
+.icon{
+  @images-folder: "/pics";
+  @image-name: "bgdesert.jpg";
+  background-image: url("@{images-folder}/@{image-name}");
+}
+
+@images-folder: "/new-images";
+.icon2 {
+  @image-name: "new-icon.jpg";
+  background-image: url("@{images-folder}/@{image-name}");
+}
+
+.section {
+  // @color: primary;
+  @color: secondary;
+
+  
+  // color: @color;
+  color: @@color;
+}
+
+.btn1{
+  padding: 20px;
+
+  @color: rgb(255, 30, 135);
+  
+  color: @color;
+  border: 2px solid @color;
+  box-shadow: 0 4px 2px @color;
+}
+
+// Using property value with $property-name
+.btn2{
+  padding: 20px;
+  background-color: dodgerblue;
+  border:($padding / 10) solid darken($background-color, 30%);
+  
+}

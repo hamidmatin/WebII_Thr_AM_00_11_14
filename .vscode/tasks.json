@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "LESS Intro",
+      "type": "shell",
+      "command": "lessc less-course/less/less-intro.less less-course/css/less-intro.css --source-map",
+      "problemMatcher": []
+    },
+    {
+      "label": "LESS Intro compact",
+      "type": "shell",
+      "command": "lessc less-course/less/less-intro.less less-course/css/less-intro.min.css -x --source-map",
+      "problemMatcher": []
+    },
+    {
+      "label": "Compile Style.less",
+      "type": "shell",
+      "command": "lessc less-course/less/style.less less-course/css/style.css --source-map",
+      "problemMatcher": []
+    },
+  ]
+}

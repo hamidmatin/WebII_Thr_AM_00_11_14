@@ -10,3 +10,15 @@
 @import "10_loop";
 @import "11_map";
 @import "12_content_in_mixin";
+
+$test: '/images';
+
+.bgi-1 {
+  background-image: url('#{$test}/pic1.png');
+}
+
+$test:'/new-images';
+.bgi-2 {
+  background-image: url('#{$test}/pic2.png');
+}
+

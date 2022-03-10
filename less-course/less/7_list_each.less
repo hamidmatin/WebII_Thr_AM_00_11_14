@@ -1,0 +1,40 @@
+/********* List **********/
+@list : range(10px, 30px, 5);
+
+//each(@list, {@value, @index})
+
+each(@list,{
+  .icon-@{index}{
+    width: @value;
+  }
+})
+
+//each(@map, {@value, @key, @index})
+
+@set: {
+  one: blue;
+  two: green;
+  three: red;
+}
+
+each(@set, {
+  .@{key}-@{index}{
+    color: @value;
+  }
+})
+
+@sizes: {
+  mobile: 320px;
+  tablet: 768px;
+  desktop: 1024px;
+}
+.navbar {
+  display: block;
+
+  each(@sizes, {
+    @media (min-width: @value){
+      display: inline-block;
+    }
+  })
+  
+}
