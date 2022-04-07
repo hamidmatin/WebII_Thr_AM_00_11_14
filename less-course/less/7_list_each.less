@@ -1,11 +1,35 @@
 /********* List **********/
-@list : range(10px, 30px, 5);
+// @icon-sizes: 40px 50px 80px 100px;
+@icon-sizes: 40px, 50px, 80px, 100px;
 
 //each(@list, {@value, @index})
+each(@icon-sizes, {
+  .icon-@{value} {
+    display: inline-block;
+    width: @value;
+    height: @value;
+  }
+})
+
+/* 
+  range(start, end, step)
+
+  start - (optional) The start value e.g. 1 or 1px
+  end - The end value e.g. 5px
+  step - (optional) The amount to increment by
+*/
+@list : range(10px, 30px, 10);
+each(@list,{
+  .p-@{index}{
+    padding: @value;
+  }
+})
+
 
 each(@list,{
-  .icon-@{index}{
-    width: @value;
+  @num: length(@list) - @index + 1;
+  .fst-@{num}{
+    font-size: @value;
   }
 })
 
@@ -23,18 +47,17 @@ each(@set, {
   }
 })
 
-@sizes: {
-  mobile: 320px;
-  tablet: 768px;
-  desktop: 1024px;
+@medias: {
+  sm: 576px;
+  md: 768px;
+  lg: 992px;
+  xl: 1200px;
 }
-.navbar {
-  display: block;
 
-  each(@sizes, {
-    @media (min-width: @value){
-      display: inline-block;
-    }
-  })
+each(@medias, {
+  @media screen and (min-width: @value) {
+    .col-@{key}-1{
+      width: 8.33%;
+    }}
   
-}
+})

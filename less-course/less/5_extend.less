@@ -1,9 +1,9 @@
 /******* Extends ********/
-.inline {
-  color: red;
+.unstyled-list {
+  list-style: none;
 }
 nav ul {
-  &:extend(.inline);
+  &:extend(.unstyled-list);
   background: blue;
 }
 
@@ -11,7 +11,7 @@ nav ul {
   padding: 20px;
 }
 
-.calss-2:extend(.calss-1, .inline){
+.calss-2:extend(.calss-1, .unstyled-list){
   background-color: green;
 }
 

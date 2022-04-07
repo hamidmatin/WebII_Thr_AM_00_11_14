@@ -202,5 +202,125 @@ h2 + p {
   background-color: #750606;
   color: white;
 }
+/******* Extends ********/
+.unstyled-list,
+nav ul,
+.calss-2 {
+  list-style: none;
+}
+nav ul {
+  background: blue;
+}
+.calss-1,
+.calss-2 {
+  padding: 20px;
+}
+.calss-2 {
+  background-color: green;
+}
+.bucket,
+.extend-all {
+  background-color: lightblue;
+}
+.bucket tr,
+.some-class,
+.extend-all tr {
+  color: blue;
+}
+.some-class {
+  margin-top: 20px;
+}
+.extend-all {
+  margin-bottom: 20px;
+}
+/******** Map **********/
+.navbar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar {
+    display: inline-block;
+  }
+}
+@media (min-width: 320px) {
+  .navbar {
+    display: none !important;
+  }
+}
+/********* List **********/
+.icon-40px {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.icon-50px {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.icon-80px {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.icon-100px {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+/* 
+  range(start, end, step)
+
+  start - (optional) The start value e.g. 1 or 1px
+  end - The end value e.g. 5px
+  step - (optional) The amount to increment by
+*/
+.p-1 {
+  padding: 10px;
+}
+.p-2 {
+  padding: 20px;
+}
+.p-3 {
+  padding: 30px;
+}
+.fst-3 {
+  font-size: 10px;
+}
+.fst-2 {
+  font-size: 20px;
+}
+.fst-1 {
+  font-size: 30px;
+}
+.one-1 {
+  color: blue;
+}
+.two-2 {
+  color: green;
+}
+.three-3 {
+  color: red;
+}
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    color: red;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    color: red;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    color: red;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    color: red;
+  }
+}
 /********** Main Style *****/
 /*# sourceMappingURL=style.css.map */
